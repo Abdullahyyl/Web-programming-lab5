@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ProductList from "./components/ProductList";
 
 function App() {
   const [showProducts, setShowProducts] = useState(false);
@@ -27,6 +28,8 @@ function App() {
         />
         <p>Hello, {name}</p>
       </div>
+
+      {showProducts && <ProductList />}
     </div>
   );
 }
